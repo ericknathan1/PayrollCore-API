@@ -3,8 +3,8 @@ package com.senac.erick.DTO.response;
 public class FolhaPagamentoResponse {
 
     private int id;
-    private String mes;
-    private String ano;
+    private int mes;
+    private int ano;
     private int salario;
     
     public int getId() {
@@ -13,16 +13,17 @@ public class FolhaPagamentoResponse {
     public void setId(int id) {
         this.id = id;
     }
-    public String getMes() {
+    
+    public int getMes() {
         return mes;
     }
-    public void setMes(String mes) {
+    public void setMes(int mes) {
         this.mes = mes;
     }
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
-    public void setAno(String ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
     public int getSalario() {

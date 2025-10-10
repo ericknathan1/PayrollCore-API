@@ -18,9 +18,9 @@ public class FolhaPagamento {
     @Column(name = "folha_pagamento_id")
     private int id;
     @Column(name="folha_pagamento_mes")
-    private String mes;
+    private int mes;
     @Column(name="folha_pagamento_ano")
-    private String ano;
+    private int ano;
     @Column(name="folha_pagamento_salario")
     private int salario;
     @ManyToOne
@@ -32,19 +32,20 @@ public class FolhaPagamento {
     public void setId(int id) {
         this.id = id;
     }
-    public String getMes() {
+    
+    public int getMes() {
         return mes;
     }
-    public void setMes(String mes) {
+    public void setMes(int mes) {
         this.mes = mes;
     }
-    public String getAno() {
+    public int getAno() {
         return ano;
     }
-    public void setAno(String ano) {
+    public void setAno(int ano) {
         this.ano = ano;
     }
-   
+    
     public Funcionario getFuncionario() {
         return funcionario;
     }

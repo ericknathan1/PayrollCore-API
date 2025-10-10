@@ -2,7 +2,7 @@ package com.senac.erick.DTO.response;
 
 import java.util.List;
 
-import com.senac.erick.entity.Role;
+import com.senac.erick.enums.RoleName;
 
 public class FuncionarioResponse {
 
@@ -11,7 +11,8 @@ public class FuncionarioResponse {
     private String nome;
     private String dataNascimento;
     private int status;
-    private List<Role> role;
+    private List<FolhaPagamentoResponse> folhas;
+    private List<RoleName> roles;
 
     public int getId() {
         return id;
@@ -43,14 +44,17 @@ public class FuncionarioResponse {
     public void setStatus(int status) {
         this.status = status;
     }
-    public List<Role> getRole() {
-        return role;
+    public List<RoleName> getRoles() {
+        return roles;
     }
-    public void setRole(List<Role> role) {
-        this.role = role;
+    public void setRoles(List<RoleName> roles) {
+        this.roles = roles;
     }
-
-    
-
+    public List<FolhaPagamentoResponse> getFolhas() {
+        return folhas;
+    }
+    public void setFolhas(List<FolhaPagamentoResponse> folhas) {
+        this.folhas = folhas;
+    }
     
 }

@@ -25,9 +25,13 @@ public class FolhaPagamentoService {
     private ModelMapper modelMapper;
 
     public FolhaPagamentoResponse criarFolhaPagamento(FolhaPagamentoRequest request) {
-        FolhaPagamento folhaPagamento = modelMapper.map(request, FolhaPagamento.class);
-        folhaPagamento.setFuncionario(funcionarioRepository.funcionarioPorId(request.getFuncionarioId()));
-        folhaPagamento = folhaPagamentoRepository.save(folhaPagamento);
+        FolhaPagamento folhaPagamento = new FolhaPagamento();
+        folhaPagamento.setMes(request.getMes());
+        folhaPagamento.setAno(request.getAno());
+        folhaPagamento.setSalario(request.getSalario());
+        Funcionario funcionario = funcionarioRepository.funcionarioPorId(request.getFuncionarioId());
+        folhaPagamento.setFuncionario(funcionario);
+        folhaPagamentoRepository.save(folhaPagamento);
         return modelMapper.map(folhaPagamento, FolhaPagamentoResponse.class);
     }
     

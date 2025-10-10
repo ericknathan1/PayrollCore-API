@@ -2,7 +2,6 @@ package com.senac.erick.controller;
 
 import java.util.List;
 
-import com.senac.erick.entity.Funcionario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,7 +42,7 @@ public class FuncionarioController {
     }
 
     @GetMapping("/listar")
-    public ResponseEntity<List<Funcionario>> listarFuncionarios() {
+    public ResponseEntity<List<FuncionarioResponse>> listarFuncionarios() {
         return ResponseEntity.ok(funcionarioService.listarFuncionarios());
     }
 
