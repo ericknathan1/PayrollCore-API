@@ -34,7 +34,7 @@ O projeto foca em segurança e controle de acesso, utilizando a arquitetura de *
 ### Configuração
 1.  **Clone o repositório:**
     ```bash
-    git clone [SEU_LINK_DO_REPOSITORIO]
+    git clone https://github.com/ericknathan1/PayrollCore-API.git
     ```
 2.  **Configurar o Banco de Dados:**
     Atualize o arquivo `src/main/resources/application.properties` com as credenciais do seu banco de dados MySQL.
